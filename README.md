@@ -1,5 +1,5 @@
 # python-docker-hello-word
-Hello World python flask web application using docker
+Dockerized Hello World python Flask web application
 
 ## You can build the image using below command:
 ```
