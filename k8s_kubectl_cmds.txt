@@ -1,0 +1,29 @@
+kuberneties:
+1. to check whether kubernaties is working or not:
+	$ kubectl version
+	$ kubectl cluster-info
+
+2. to create a pod:
+	$ kubectl run first-deployment --image=amitmeel1/pythoncontainerlearning:flask-hello-world --port=5000
+	$ kubectl get pods -n default
+	$ kubectl get pods
+  
+3. To create a deployment:
+	$ >kubectl create deployment first-deployment --image=amitmeel1/pythoncontainerlearning:flask-hello-world --port=5000
+	$ kubectl get deployments
+  To expose the deployment as a serviuce:
+	$ kubectl expose deployment first-deployment --port 5000 --type=LoadBalancer --name=first-service service/first-service exposed
+
+  now goto browser and type: 
+
+
+4. to delete a pod
+	$ kubectl delete pod first-deployment 
+   to delete a service:
+	$ bkubectl delete service first-service
+   to delete a deployment:
+	$ kubectl delete deployment first-deployment
+
+5. fopr port-forward
+	$ kubectl port-forward TYPE/NAME [options] LOCAL_PORT:REMOTE_PORT
+	$ kubectl port-forward first-deployment 5000:5000
